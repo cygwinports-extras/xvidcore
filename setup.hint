@@ -1,0 +1,5 @@
+category: Video
+requires: cygwin libxvidcore4
+sdesc: "XviD MPEG-4 video codec (documentation)"
+ldesc: "XviD is an ISO MPEG-4 compliant video codec, so designed to
+compress/decompress digital video."

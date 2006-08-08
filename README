@@ -1,0 +1,74 @@
+xvidcore
+------------------------------------------
+XviD is an ISO MPEG-4 compliant video codec, so designed to
+compress/decompress digital video.
+
+Runtime requirements:
+  cygwin-1.5.21-1
+
+Build requirements:
+  cygwin-1.5.21-1
+  autoconf2.5-2.59-2
+  binutils-20060709-1
+  cygport-0.2.5-1
+  gawk-3.1.5-2
+  gcc-core-3.4.4-1
+  make-3.81-1
+  sed-4.1.5-1
+  yasm-0.5-1
+
+Canonical website:
+  http://www.xvid.org/
+
+Canonical download:
+  http://www.xvid.org/download/
+
+-------------------------------------------
+
+Build instructions:
+  unpack xvidcore-1.0.3-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./xvidcore-1.0.3-1.cygport all
+
+This will create:
+  /usr/src/libxvidcore-devel-1.0.3-1.tar.bz2
+  /usr/src/libxvidcore4-1.0.3-1.tar.bz2
+  /usr/src/xvidcore-1.0.3-1-src.tar.bz2
+  /usr/src/xvidcore-1.0.3-1.tar.bz2
+
+-------------------------------------------
+
+Files included in the main package:
+
+  /usr/share/doc/Cygwin/xvidcore-1.0.3.README
+  /usr/share/doc/xvidcore-1.0.3/AUTHORS
+  /usr/share/doc/xvidcore-1.0.3/ChangeLog
+  /usr/share/doc/xvidcore-1.0.3/LICENSE
+  /usr/share/doc/xvidcore-1.0.3/README
+  /usr/share/doc/xvidcore-1.0.3/TODO
+
+Files included in the runtime library package:
+
+  /usr/bin/cygxvidcore-4.dll
+
+Files included in the development package:
+
+  /usr/include/xvid.h
+  /usr/lib/libxvidcore.a
+  /usr/lib/libxvidcore.dll.a
+
+------------------
+
+Port Notes:
+
+----- version 1.1.0-1 -----
+Version bump.
+
+----- version 1.0.3-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
