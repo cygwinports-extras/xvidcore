@@ -1,0 +1,31 @@
+DESCRIPTION="XviD MPEG-4 video codec"
+HOMEPAGE="http://www.xvid.org/"
+SRC_URI="http://downloads.xvid.org/downloads/${P}.tar.bz2"
+
+DIFF_EXCLUDES="platform.inc configure"
+
+PKG_NAMES="${PN} lib${PN}4 lib${PN}-devel"
+PKG_HINTS="setup lib devel"
+PKG_CONTENTS[0]='usr/share/'
+PKG_CONTENTS[1]='usr/bin/*.dll'
+PKG_CONTENTS[2]='usr/include/ usr/lib/'
+
+src_compile() {
+	cd ${S}/build/generic
+	autoconf --force || error "autoconf failed"
+	lndirs
+	cd ${B}/build/generic
+	CYGCONF_SOURCE=${B}/build/generic cygconf
+	cygmake
+}
+
+src_install() {
+	cd ${B}/build/generic
+	dobin =build/*.dll
+	dolib =build/*.a
+
+	insinto /usr/include
+	doins ${S}/src/xvid.h
+
+	dodoc ${S}/doc/INSTALL
+}
