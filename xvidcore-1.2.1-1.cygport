@@ -1,14 +1,15 @@
 DESCRIPTION="XviD MPEG-4 video codec"
 HOMEPAGE="http://www.xvid.org/"
 SRC_URI="http://downloads.xvid.org/downloads/${P}.tar.bz2"
+SRC_DIR=${PN}
+
+PATCH_URI="1.1.3-cygwin-build.patch"
 
 DIFF_EXCLUDES="platform.inc configure"
 
 PKG_NAMES="${PN} lib${PN}4 lib${PN}-devel"
-PKG_HINTS="setup lib devel"
-PKG_CONTENTS[0]='usr/share/'
-PKG_CONTENTS[1]='usr/bin/*.dll'
-PKG_CONTENTS[2]='usr/include/ usr/lib/'
+libxvidcore4_CONTENTS="usr/bin/cygxvidcore-4.dll usr/share/doc/"
+libxvidcore_devel_CONTENTS='usr/include/ usr/lib/'
 
 src_compile() {
 	cd ${S}/build/generic
@@ -26,6 +27,4 @@ src_install() {
 
 	insinto /usr/include
 	doins ${S}/src/xvid.h
-
-	dodoc ${S}/doc/INSTALL
 }
