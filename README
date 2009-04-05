@@ -4,17 +4,18 @@ XviD is an ISO MPEG-4 compliant video codec, so designed to
 compress/decompress digital video.
 
 Runtime requirements:
-  cygwin-1.5.25-15
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
 
 Build requirements:
-  autoconf2.5-2.63-1
+  autoconf2.5-2.63-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
   make-3.81-2
   sed-4.1.5-2
-  yasm-0.7.2-1
+  yasm-0.7.2-10
 
 Canonical website:
   http://www.xvid.org/
@@ -42,11 +43,11 @@ Files included in the binary packages:
 
 (libxvidcore4)
   /usr/bin/cygxvidcore-4.dll
-  /usr/share/doc/xvidcore-1.2.1/AUTHORS
-  /usr/share/doc/xvidcore-1.2.1/ChangeLog
-  /usr/share/doc/xvidcore-1.2.1/LICENSE
-  /usr/share/doc/xvidcore-1.2.1/README
-  /usr/share/doc/xvidcore-1.2.1/TODO
+  /usr/share/doc/xvidcore/AUTHORS
+  /usr/share/doc/xvidcore/ChangeLog
+  /usr/share/doc/xvidcore/LICENSE
+  /usr/share/doc/xvidcore/README
+  /usr/share/doc/xvidcore/TODO
 
 (libxvidcore-devel)
   /usr/include/xvid.h
@@ -57,17 +58,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 1.2.1-1 -----
-Version bump.
-
------ version 1.1.3-1 -----
-Version bump.
-
------ version 1.1.0-1 -----
-Version bump.
-
------ version 1.0.3-1 -----
-Initial release for Cygwin.
+----- version 1.2.1-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

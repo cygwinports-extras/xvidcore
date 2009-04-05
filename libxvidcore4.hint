@@ -1,5 +1,5 @@
 category: Video
-requires: cygwin
+requires: cygwin libgcc1
 external-source: xvidcore
 sdesc: "XviD MPEG-4 video codec (runtime library)"
 ldesc: "XviD is an ISO MPEG-4 compliant video codec, so designed to
