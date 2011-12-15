@@ -7,7 +7,7 @@ PATCH_URI="1.1.3-cygwin-build.patch"
 
 DIFF_EXCLUDES="platform.inc configure"
 
-PKG_NAMES="${PN} lib${PN}4 lib${PN}-devel"
+PKG_NAMES="lib${PN}4 lib${PN}-devel"
 libxvidcore4_CONTENTS="usr/bin/cygxvidcore-4.dll usr/share/doc/"
 libxvidcore_devel_CONTENTS='usr/include/ usr/lib/'
 
