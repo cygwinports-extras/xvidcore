@@ -31,3 +31,16 @@
  	AC_MSG_RESULT([ok])
  	STATIC_LIB="xvidcore.\$(STATIC_EXTENSION)"
  	SHARED_LIB="xvidcore.\$(SHARED_EXTENSION)"
+--- origsrc/xvidcore/src/nasm.inc	2011-02-25 06:40:25.000000000 -0600
++++ src/xvidcore/src/nasm.inc	2013-12-03 23:52:13.269203500 -0600
+@@ -159,8 +159,10 @@ BITS 32
+ 
+ 
+ %ifdef WINDOWS
++%ifndef ARCH_IS_X86_64
+       %define PREFIX
+ %endif
++%endif
+ 
+ %ifdef NO_PREFIX
+       %undef PREFIX
